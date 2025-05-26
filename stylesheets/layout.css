@@ -30,13 +30,46 @@
 	@media only screen and (min-width: 768px) and (max-width: 959px) {}
 
 	/* All Mobile Sizes (devices and browser) */
-	@media only screen and (max-width: 767px) {}
+	@media only screen and (max-width: 767px) {
+		.sidebar, .content {
+			width: 100% !important; /* Override skeleton's fixed widths if necessary */
+			margin-left: 0 !important;
+			margin-right: 0 !important;
+		}
+		.sidebar ul {
+			/* Example: Add some padding for easier tapping if needed */
+			padding-left: 10px; 
+		}
+		.sidebar ul li a {
+			/* Example: Make tap targets larger */
+			display: inline-block;
+			padding-top: 10px;
+			padding-bottom: 10px;
+		}
+		.content img {
+			max-width: 100%; /* Ensure image scales down */
+			height: auto;
+		}
+		body {
+			font-size: 100%; /* Adjust base font size for mobile */
+		}
+		h3 {
+			font-size: 1.5em; /* Adjust heading font size for mobile */
+		}
+	}
 
 	/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 	@media only screen and (min-width: 480px) and (max-width: 767px) {}
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
-	@media only screen and (max-width: 479px) {}
+	@media only screen and (max-width: 479px) {
+		body {
+			font-size: 90%; /* Further adjust font size for very small screens */
+		}
+		h3 {
+			font-size: 1.4em; /* Further adjust heading font size for very small screens */
+		}
+	}
 
 
 /* #Font-Face
